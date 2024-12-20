@@ -56,6 +56,7 @@ namespace PatientManagementApi.Controllers
         /// </summary>
         /// <param name="patient">The patient to add</param>
         /// <returns>Status 201 Created</returns>
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AddPatient([FromBody] Patient patient)
         {

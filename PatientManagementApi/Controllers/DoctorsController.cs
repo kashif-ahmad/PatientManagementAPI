@@ -40,6 +40,7 @@ namespace PatientManagementApi.Controllers
         }
 
         // POST: api/Doctors
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AddDoctor([FromBody] Doctor doctor)
         {
